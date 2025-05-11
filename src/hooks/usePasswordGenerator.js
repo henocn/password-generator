@@ -40,22 +40,34 @@ const usePasswordGenerator = () => {
 
   // Générer un mot de passe personnalisé
   const generatePersonalPassword = useCallback(() => {
+    // Vérifier si au moins une information est fournie
     if (!personalInfo.info1 && !personalInfo.info2 && !personalInfo.info3) {
       toast.error('Veuillez saisir au moins une information personnelle')
       return
     }
     
-    const newPassword = generatePersonalizedPassword(personalInfo)
-    setPassword(newPassword)
-    setPasswordStrength(evaluatePasswordStrength(newPassword))
-    
-    // Créer une explication personnalisée
-    let explanation = explainPassword(newPassword)
-    explanation += ' Il est basé sur vos informations personnelles, ce qui le rend mémorisable pour vous.'
-    setExplanation(explanation)
-    setIsPersonalized(true)
-    
-    toast.success('Mot de passe personnalisé généré !')
+    try {
+      console.log("Informations personnelles:", personalInfo); // Débogage
+      
+      // Générer le mot de passe personnalisé
+      const newPassword = generatePersonalizedPassword(personalInfo)
+      console.log("Mot de passe généré:", newPassword); // Débogage
+      
+      // Mettre à jour l'état
+      setPassword(newPassword)
+      setPasswordStrength(evaluatePasswordStrength(newPassword))
+      
+      // Créer une explication personnalisée
+      let personalExplanation = explainPassword(newPassword)
+      personalExplanation += ' Il est basé sur vos informations personnelles, ce qui le rend mémorisable pour vous.'
+      setExplanation(personalExplanation)
+      setIsPersonalized(true)
+      
+      toast.success('Mot de passe personnalisé généré !')
+    } catch (error) {
+      console.error("Erreur détaillée:", error.message, error.stack); // Débogage amélioré
+      toast.error('Erreur lors de la génération du mot de passe')
+    }
   }, [personalInfo])
 
   // Copier le mot de passe dans le presse-papier
