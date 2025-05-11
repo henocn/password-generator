@@ -1,12 +1,48 @@
-# React + Vite
+# Générateur de Mot de Passe Sécurisé
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un générateur de mot de passe moderne et sécurisé développé avec React et Vite, offrant à la fois des options de génération standard et personnalisée.
 
-Currently, two official plugins are available:
+## Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Générateur Standard**: Créez des mots de passe aléatoires avec des options personnalisables
+  - Longueur ajustable (4-32 caractères)
+  - Inclusion/exclusion de minuscules, majuscules, chiffres et symboles
+  
+- **Générateur Personnalisé**: Créez des mots de passe mémorisables basés sur vos informations personnelles
+  - Transforme vos informations en mots de passe sécurisés
+  - Équilibre entre mémorisation et sécurité
 
-## Expanding the ESLint configuration
+- **Évaluation de la Force**: Analyse en temps réel de la robustesse de votre mot de passe
+  - Score visuel de sécurité
+  - Estimation du temps nécessaire pour cracker le mot de passe
+  - Suggestions d'amélioration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Interface Utilisateur Intuitive**:
+  - Design responsive adapté à tous les appareils
+  - Support du mode sombre/clair
+  - Animations fluides et retours visuels
+
+## Technologies Utilisées
+
+- React 18
+- Vite
+- Tailwind CSS
+- zxcvbn (évaluation de la force des mots de passe)
+- React Icons
+- React Toastify (notifications)
+
+## Bonnes Pratiques de Sécurité
+
+- Utilisez un mot de passe d'au moins 12 caractères
+- Combinez lettres majuscules, minuscules, chiffres et symboles
+- Évitez les séquences prévisibles comme "123456" ou "qwerty"
+- N'utilisez pas d'informations personnelles évidentes
+- Utilisez un mot de passe unique pour chaque compte important
+
+## Licence
+
+MIT
+
+---
+
+Développé pour renforcer la sécurité en ligne.
