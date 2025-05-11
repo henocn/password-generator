@@ -1,1 +1,43 @@
-.module-slider {} 
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #3b82f6;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  transition: all 0.2s ease;
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #3b82f6;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.2);
+}
+
+.slider::-moz-range-thumb:hover {
+  box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.2);
+}
+
+.slider:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.2);
+}
+
+.slider:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.2);
+}
