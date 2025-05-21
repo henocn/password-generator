@@ -1,4 +1,4 @@
-# Générateur de Mot de Passe Sécurisé
+# Générateur de Mot de Passe
 
 Un générateur de mot de passe moderne et sécurisé développé avec React et Vite, offrant à la fois des options de génération standard et personnalisée.
 
